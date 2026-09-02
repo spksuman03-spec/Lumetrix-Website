@@ -31,6 +31,14 @@
       "password": "$2a$10$ZZSIyBqxG21Qza67IsagEuK4ZokhXjvQkbbYIPBJSjI6iV8PBuOdm",
       "isAdmin": false,
       "createdAt": "2026-08-18T07:51:00.775Z"
+    },
+    {
+      "_id": "usr_1787290594218",
+      "name": "karthiDivya",
+      "email": "karthi323@gmail.com",
+      "password": "$2a$10$Nu3tAhuH37Z38btxQlAFBuMorqPdshq19uTb1C2Q3ELIxTnKk9QTK",
+      "isAdmin": false,
+      "createdAt": "2026-08-21T05:36:34.218Z"
     }
   ],
   "products": [
@@ -68,7 +76,7 @@
       "brand": "HRX",
       "category": "Apparel",
       "gender": "Men",
-      "price": 29.99,
+      "price": 150.99,
       "countInStock": 59,
       "rating": 4.7,
       "numReviews": 450,
@@ -144,10 +152,10 @@
       "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80",
       "description": "High-traction rubber sole sports shoe with mesh upper for maximum ventilation during workouts.",
       "brand": "Puma",
-      "category": "Footwear",
+      "category": "Accessories",
       "gender": "Men",
-      "price": 69.99,
-      "countInStock": 49,
+      "price": 269.99,
+      "countInStock": 65,
       "rating": 4.7,
       "numReviews": 380,
       "featured": true,
@@ -277,7 +285,7 @@
       "category": "Apparel",
       "gender": "Men",
       "price": 39.99,
-      "countInStock": 35,
+      "countInStock": 34,
       "rating": 4.8,
       "numReviews": 140,
       "featured": false,
@@ -329,7 +337,7 @@
       "category": "Apparel",
       "gender": "Men",
       "price": 64.99,
-      "countInStock": 20,
+      "countInStock": 18,
       "rating": 4.9,
       "numReviews": 175,
       "featured": false,
@@ -693,7 +701,7 @@
       "category": "Apparel",
       "gender": "Women",
       "price": 29.99,
-      "countInStock": 50,
+      "countInStock": 49,
       "rating": 4.6,
       "numReviews": 220,
       "featured": false,
@@ -1544,6 +1552,82 @@
     }
   ],
   "orders": [
+    {
+      "_id": "ord_1787290642748",
+      "user": "usr_1787290594218",
+      "orderItems": [
+        {
+          "name": "Women's Casual Cotton Printed Top Blouse",
+          "qty": 1,
+          "image": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800&auto=format&fit=crop&q=80",
+          "price": 29.99,
+          "product": "prd_28"
+        },
+        {
+          "name": "Men's Oversized Streetwear Printed Cotton Graphic Tee",
+          "qty": 1,
+          "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop&q=80",
+          "price": 39.99,
+          "product": "prd_11"
+        }
+      ],
+      "shippingAddress": {
+        "address": "123 Innovation Way",
+        "city": "San Francisco",
+        "postalCode": "94105",
+        "country": "United States"
+      },
+      "paymentMethod": "Stripe Credit Card",
+      "itemsPrice": 69.98,
+      "taxPrice": 5.6,
+      "shippingPrice": 15,
+      "totalPrice": 90.58,
+      "isPaid": true,
+      "isDelivered": true,
+      "createdAt": "2026-08-21T05:37:22.748Z",
+      "paidAt": "2026-08-21T05:37:22.763Z",
+      "paymentResult": {
+        "id": "ch_stripe_9q8y3q0j",
+        "status": "succeeded",
+        "update_time": "2026-08-21T05:37:22.763Z",
+        "email_address": "karthi323@gmail.com"
+      },
+      "deliveredAt": "2026-08-21T05:40:00.841Z"
+    },
+    {
+      "_id": "ord_1787064825067",
+      "user": "usr_admin",
+      "orderItems": [
+        {
+          "name": "Men's Traditional Pure Cotton Kurta Pyjama Set",
+          "qty": 2,
+          "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80",
+          "price": 64.99,
+          "product": "prd_13"
+        }
+      ],
+      "shippingAddress": {
+        "address": "123 Innovation Way",
+        "city": "San Francisco",
+        "postalCode": "94105",
+        "country": "United States"
+      },
+      "paymentMethod": "Stripe Credit Card",
+      "itemsPrice": 129.98,
+      "taxPrice": 10.4,
+      "shippingPrice": 0,
+      "totalPrice": 140.38,
+      "isPaid": true,
+      "isDelivered": false,
+      "createdAt": "2026-08-18T14:53:45.067Z",
+      "paidAt": "2026-08-18T14:53:45.085Z",
+      "paymentResult": {
+        "id": "ch_stripe_5q8jo55j",
+        "status": "succeeded",
+        "update_time": "2026-08-18T14:53:45.085Z",
+        "email_address": "admin@example.com"
+      }
+    },
     {
       "_id": "ord_1787040087201",
       "user": "usr_admin",
