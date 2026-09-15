@@ -2,6 +2,7 @@ services:
   - type: web
     name: lumetrix-fullstack
     env: node
+    plan: free
     buildCommand: npm run build
     startCommand: npm start
     envVars:
@@ -9,5 +10,6 @@ services:
         value: production
       - key: PORT
         value: 10000
+
 
 
