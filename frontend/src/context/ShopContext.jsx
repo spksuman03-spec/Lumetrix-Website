@@ -2,7 +2,23 @@ import React, { createContext, useState, useEffect } from 'react';
 
 export const ShopContext = createContext();
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const getApiBase = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  if (typeof window !== 'undefined') {
+    const { hostname, protocol, port } = window.location;
+    // In production or when hosted on single web service (Render, Vercel, Netlify)
+    if (import.meta.env.PROD || port === '' || port === '80' || port === '443') {
+      return '/api';
+    }
+    // In local dev when accessed via mobile phone or local network IP (e.g. 192.168.x.x)
+    return `${protocol}//${hostname}:5000/api`;
+  }
+  return 'http://localhost:5000/api';
+};
+
+const API_BASE = getApiBase();
 
 export const ShopProvider = ({ children }) => {
   // Theme state
