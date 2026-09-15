@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Full-Stack MERN E-Commerce Application",
   "main": "backend/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node backend/server.js",
-    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
     "server": "nodemon backend/server.js",
     "client": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -15,6 +19,14 @@
   "keywords": ["mern", "ecommerce", "react", "express", "node", "mongodb"],
   "author": "Antigravity AI",
   "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0"

@@ -6,10 +6,13 @@ services:
     buildCommand: npm run build
     startCommand: npm start
     envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
+
 
 
 
