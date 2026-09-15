@@ -35,6 +35,23 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Production Static Assets & Client Routing
+const rootDir = path.resolve();
+const distPath = path.join(rootDir, 'frontend', 'dist');
+
+if (process.env.NODE_ENV === 'production' || process.env.SERVE_FRONTEND === 'true') {
+  app.use(express.static(distPath));
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(distPath, 'index.html'));
+    }
+  });
+} else {
+  app.get('/', (req, res) => {
+    res.send('MERN E-Commerce API is running...');
+  });
+}
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

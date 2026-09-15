@@ -129,7 +129,7 @@
       "category": "Apparel",
       "gender": "Men",
       "price": 79.99,
-      "countInStock": 20,
+      "countInStock": 19,
       "rating": 4.8,
       "numReviews": 190,
       "featured": false,
@@ -1552,6 +1552,40 @@
     }
   ],
   "orders": [
+    {
+      "_id": "ord_1788803850721",
+      "user": "usr_admin",
+      "orderItems": [
+        {
+          "name": "Men's Formal Italian Wool Slim Trousers Pants",
+          "qty": 1,
+          "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&auto=format&fit=crop&q=80",
+          "price": 79.99,
+          "product": "prd_5"
+        }
+      ],
+      "shippingAddress": {
+        "address": "123 Innovation Way",
+        "city": "San Francisco",
+        "postalCode": "94105",
+        "country": "United States"
+      },
+      "paymentMethod": "Stripe Credit Card",
+      "itemsPrice": 79.99,
+      "taxPrice": 6.4,
+      "shippingPrice": 15,
+      "totalPrice": 101.39,
+      "isPaid": true,
+      "isDelivered": false,
+      "createdAt": "2026-09-07T17:57:30.721Z",
+      "paidAt": "2026-09-07T17:57:30.738Z",
+      "paymentResult": {
+        "id": "ch_stripe_p837jxru",
+        "status": "succeeded",
+        "update_time": "2026-09-07T17:57:30.738Z",
+        "email_address": "admin@example.com"
+      }
+    },
     {
       "_id": "ord_1787290642748",
       "user": "usr_1787290594218",
